@@ -9,7 +9,7 @@ import kotlin.reflect.full.primaryConstructor
 class ValidatorExecutor {
     companion object {
         @JvmStatic
-        fun executeValidationWith(validation: KClass<out Validation>, value: String) {
+        fun executeValidationWith(validation: KClass<out Validation>, value: String?) {
             val validationInstance: Validation = validation.createInstance()
             for(fn in validationInstance.validations()) {
                 var message = fn(value);

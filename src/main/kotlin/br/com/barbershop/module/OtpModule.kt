@@ -8,8 +8,8 @@ import org.koin.dsl.module
 class OtpModule {
     companion object Module {
         val otpModule = module {
-            single { OtpServiceImpl() }
             single { UserRepositoryImpl() }
+            single { OtpServiceImpl(get())}
         }
     }
 
