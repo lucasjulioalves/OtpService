@@ -1,4 +1,4 @@
-package br.com.barbershop.repository.user
+package br.com.barbershop.repository.otp
 
 import com.mongodb.client.MongoClient
 import com.mongodb.client.MongoDatabase

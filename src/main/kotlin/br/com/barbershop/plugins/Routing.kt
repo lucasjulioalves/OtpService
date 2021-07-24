@@ -1,8 +1,7 @@
 package br.com.barbershop.plugins
 
-import br.com.barbershop.entities.User
-import br.com.barbershop.facade.request.PhoneRequestFacade
-import br.com.barbershop.facade.response.PhoneResponseFacade
+import br.com.barbershop.facade.request.OtpRequestFacade
+import br.com.barbershop.facade.response.OtpResponseFacade
 import br.com.barbershop.service.OtpService
 import io.ktor.routing.*
 import io.ktor.application.*
@@ -16,8 +15,8 @@ fun Application.configureRouting() {
 
     routing {
         get("/v1/{phoneNumber}") {
-            val response : PhoneResponseFacade = otpService.checkTokenStatus(
-                PhoneRequestFacade(call.parameters["phoneNumber"])
+            val response : OtpResponseFacade = otpService.checkTokenStatus(
+                OtpRequestFacade(call.parameters["phoneNumber"])
             )
             call.respond(response)
         }

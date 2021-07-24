@@ -1,6 +1,6 @@
 package br.com.barbershop.entities
 
-class User(
+class Otp(
     val phoneNumber: String
 ) {
 
