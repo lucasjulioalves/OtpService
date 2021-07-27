@@ -1,4 +1,5 @@
 package br.com.barbershop.facade.request
 
-class OtpRequestFacade(val phoneNumber: String?) {
+class OtpRequestFacade(var phoneNumber: String?) {
+    var token: String? = null
 }

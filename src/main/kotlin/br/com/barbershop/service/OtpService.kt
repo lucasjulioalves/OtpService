@@ -4,5 +4,7 @@ import br.com.barbershop.facade.request.OtpRequestFacade
 import br.com.barbershop.facade.response.OtpResponseFacade
 
 interface OtpService {
-    fun checkTokenStatus(request: OtpRequestFacade) : OtpResponseFacade
+    fun getByTokensByPhoneNumber(request: OtpRequestFacade) : OtpResponseFacade
+    fun generateCode(request: OtpRequestFacade)
+    fun validateCode(request: OtpRequestFacade)
 }

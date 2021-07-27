@@ -8,5 +8,7 @@ class ServerUtil {
         private val config = HoconApplicationConfig(ConfigFactory.load())
         val port = config.property("ktor.deployment.port").getString().toInt()
         val host = config.property("ktor.deployment.host").getString()
+
+        val databaseHost = config.property("ktor.database.host").getString()
     }
 }
